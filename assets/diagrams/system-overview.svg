@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+  <title id="t">DocReader Pro system overview</title>
+  <desc id="d">A Flutter app with viewers, a scan and convert pipeline, local SQLite storage, native Android and iOS bridges, and Firebase services.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a0f0d"/>
+      <stop offset="1" stop-color="#241410"/>
+    </linearGradient>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #f5e9e6; }
+      .h { font-size: 26px; font-weight: 700; }
+      .k { font-size: 13px; fill: #d9a39a; letter-spacing: 1.5px; font-weight: 700; }
+      .b { font-size: 16px; }
+      .s { font-size: 14px; fill: #d4b0a9; }
+      .app { fill: #3a1c16; stroke: #e0634b; stroke-width: 2; }
+      .box { fill: #4a251d; stroke: #8a4336; stroke-width: 1.5; }
+      .nat { fill: #2a2a14; stroke: #b9c03a; stroke-width: 2; }
+      .db  { fill: #14283a; stroke: #3a8fd9; stroke-width: 2; }
+      .fb  { fill: #35300f; stroke: #e6c32f; stroke-width: 2; }
+      .arrow { stroke: #e0634b; stroke-width: 2; fill: none; marker-end: url(#a); }
+    </style>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#e0634b"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" rx="16" fill="url(#bg)"/>
+  <text x="40" y="52" class="h">DocReader Pro: system overview</text>
+  <text x="40" y="78" class="s">Conceptual view. Component names describe responsibilities, not production identifiers.</text>
+
+  <rect x="40" y="110" width="700" height="440" rx="12" class="app"/>
+  <text x="60" y="140" class="k">FLUTTER APP (ANDROID + iOS)</text>
+
+  <rect x="60" y="156" width="320" height="170" rx="8" class="box"/>
+  <text x="76" y="184" class="k">VIEWERS</text>
+  <text x="76" y="210" class="b">PDF (continuous / page / swipe)</text>
+  <text x="76" y="234" class="b">Word · Excel · Text · Images</text>
+  <text x="76" y="258" class="s">Search, outline, bookmarks, thumbnails</text>
+  <text x="76" y="280" class="s">Password prompt · print · share</text>
+  <text x="76" y="302" class="s">Reading progress per file</text>
+
+  <rect x="400" y="156" width="320" height="170" rx="8" class="box"/>
+  <text x="416" y="184" class="k">SCAN + CONVERT</text>
+  <text x="416" y="210" class="b">Document scan → review → PDF</text>
+  <text x="416" y="234" class="b">Image→PDF · Merge · Split</text>
+  <text x="416" y="258" class="b">Compress · PDF→JPG · Text scan</text>
+  <text x="416" y="282" class="s">Filters and perspective off the UI thread</text>
+  <text x="416" y="304" class="s">On-device OCR</text>
+
+  <rect x="60" y="342" width="320" height="86" rx="8" class="box"/>
+  <text x="76" y="370" class="k">LIBRARY</text>
+  <text x="76" y="394" class="b">Import, folders, favourites, recents</text>
+  <text x="76" y="414" class="s">Filter, sort, pin, duplicate resolution</text>
+
+  <rect x="400" y="342" width="320" height="86" rx="8" class="box"/>
+  <text x="416" y="370" class="k">STATE + ROUTING</text>
+  <text x="416" y="394" class="b">Provider · go_router</text>
+  <text x="416" y="414" class="s">Incoming file intents handled outside routing</text>
+
+  <rect x="60" y="444" width="660" height="88" rx="8" class="box"/>
+  <text x="76" y="472" class="k">SERVICES</text>
+  <text x="76" y="496" class="s">App lock (PIN + biometrics) · In-app purchase · Ads gating + remote config</text>
+  <text x="76" y="518" class="s">Auth · Profile/settings sync · Notifications · Analytics · Updates</text>
+
+  <rect x="800" y="110" width="360" height="110" rx="12" class="db"/>
+  <text x="820" y="140" class="k">ON-DEVICE STORAGE</text>
+  <text x="820" y="168" class="b">SQLite (versioned schema)</text>
+  <text x="820" y="192" class="b">Secure storage · preferences</text>
+  <text x="820" y="212" class="s">App documents directory</text>
+
+  <rect x="800" y="250" width="360" height="140" rx="12" class="nat"/>
+  <text x="820" y="280" class="k">NATIVE BRIDGES</text>
+  <text x="820" y="308" class="b">Android: MediaStore listing, print,</text>
+  <text x="820" y="330" class="b">intent + share handling</text>
+  <text x="820" y="356" class="b">iOS: VisionKit scanner, print, share</text>
+  <text x="820" y="378" class="s">via platform channels</text>
+
+  <rect x="800" y="420" width="360" height="130" rx="12" class="fb"/>
+  <text x="820" y="450" class="k">FIREBASE</text>
+  <text x="820" y="478" class="b">Auth · Firestore (profile, settings, ad config)</text>
+  <text x="820" y="502" class="b">Messaging · Analytics · Crashlytics</text>
+  <text x="820" y="526" class="b">Performance</text>
+
+  <path d="M740 170 H800" class="arrow"/>
+  <path d="M740 320 H800" class="arrow"/>
+  <path d="M740 480 H800" class="arrow"/>
+</svg>
